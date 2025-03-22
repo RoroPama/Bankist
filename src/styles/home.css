@@ -1,5 +1,3 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
-
 :root {
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -21,6 +19,7 @@
 }
 
 html {
+  color: rgba(11, 11, 53, 0.582);
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -709,4 +708,130 @@ h4 {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+/* MediaQuery */
+
+/* Responsive Design */
+
+/* Écrans de taille moyenne (tablettes) */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .section {
+    padding: 10rem 2rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .features__feature {
+    width: 90%;
+  }
+
+  .header__title {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .header__img {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .nav {
+    padding: 0 3rem;
+  }
+
+  .nav__item {
+    margin-left: 2rem;
+  }
+}
+
+/* Écrans de petite taille (mobiles) */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav__item {
+    margin-left: 0;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .header__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .section {
+    padding: 8rem 2rem;
+  }
+
+  .features {
+    gap: 2rem;
+  }
+
+  .operations__content {
+    padding: 2rem;
+  }
+
+  .operations__content--active {
+    grid-template-columns: 1fr;
+  }
+
+  .operations__icon {
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 40rem;
+  }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+  }
+
+  .operations__tab {
+    font-size: 1.4rem;
+  }
+
+  .operations__header {
+    font-size: 2rem;
+  }
+
+  .features__header {
+    font-size: 1.8rem;
+  }
 }
